@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you reference or evaluate the architecture of Vigilo in academic, technical, or industry research, please cite it as below."
+authors:
+  - family-names: "Vaish"
+    given-names: "Bhvya"
+    website: "https://bhvyavaish.vercel.app/"
+title: "Vigilo: Intelligent Road-Incident Detection and Emergency Response Platform"
+version: 1.0.0
+date-released: 2026-10-29
+url: "https://github.com/bhvyavaish/vigilo-showcase"
+abstract: "Technical architecture, telemetry specifications, and systems design for Vigilo, an autonomous Android prototype that combines high-frequency IMU sensor fusion, on-device machine learning, zero-touch emergency escalation, and hardware-backed SHA-256 evidence integrity."
+keywords:
+  - "road safety"
+  - "accident detection"
+  - "sensor fusion"
+  - "android"
+  - "jetpack compose"
+  - "telematics"
+  - "cryptographic evidence"
+  - "emergency response"
