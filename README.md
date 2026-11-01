@@ -47,8 +47,9 @@
 
 Operating entirely on-device with an offline-first architecture, Vigilo continuously evaluates triaxial inertial measurements and GPS kinematics at 50Hz. Upon detecting potential collision shockwaves, it initiates an emergency countdown with hands-free voice command cancellation, autonomously transmits location-precise distress SMS messages to personal emergency contacts if unacknowledged, signals nearby bystanders with an optical flashlight strobe, and cryptographically signs forensic telemetry and video evidence using the hardware-backed Android Keystore.
 
-* 🌐 **Showcase Website:** *[Deployment URL pending live domain configuration]*
-* 🎥 **Demonstration Walkthrough:** *[Video link pending presentation recording upload]*
+* 🌐 **Live Website:** [https://bhvyavaish.github.io/vigilo-showcase/](https://bhvyavaish.github.io/vigilo-showcase/)
+* 💼 **Enterprise & Partners:** [https://bhvyavaish.github.io/vigilo-showcase/business.html](https://bhvyavaish.github.io/vigilo-showcase/business.html)
+* 📱 **Interactive Demonstration:** Available for in-person interactive walkthrough and guided inspection at Google DevFest Lucknow (see [`docs/demonstration-guide.md`](docs/demonstration-guide.md))
 * 📐 **Deep Architecture Documentation:** [`docs/architecture.md`](docs/architecture.md)
 * 📋 **Current Project Verification Matrix:** [`PROJECT_STATUS.md`](PROJECT_STATUS.md)
 
