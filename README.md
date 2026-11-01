@@ -143,21 +143,80 @@ The complete end-to-end user journey within the Vigilo application:
 ## Application Screenshots
 
 > [!NOTE]
-> **Authenticity Standard:** In accordance with repository standards, synthetic mockups and generic stock graphics are prohibited. 
-> To review the exact specifications, desired states, adb capture instructions, and sanitization guidelines for capturing screenshots on a physical Android device, consult the **[Screenshot Acquisition Guide](assets/screenshots/README.md)**.
+> **Verified Mobile Interface:** Below are actual application screenshots captured from a physical device running the Vigilo Android build, demonstrating the end-to-end incident intelligence, alerting, and evidence verification workflow.
 
-| Screen Name | Suggested Filename | Functional Importance |
-| :--- | :--- | :--- |
-| **Home Dashboard** | `01_home_dashboard.png` | Displays drive mode launcher, mounting profile selector, and recent drive safety stats. |
-| **Active Drive Cockpit** | `02_active_drive_cockpit.png` | Live telematics dashboard showing real-time G-force gauge, GPS speed, and sensor diagnostics. |
-| **Sensor Diagnostics** | `03_sensor_diagnostics.png` | Real-time 50Hz triaxial accelerometer and gyroscope readouts and buffer capacity. |
-| **Impact Alert Countdown** | `04_impact_countdown_alert.png` | 10-second pulsing emergency alert screen with confidence tier, plain-language trigger reason, and voice listening prompt. |
-| **Emergency Assistance** | `05_emergency_assistance.png` | Incident GPS coordinates, reverse-geocoded address, impact telemetry, and simulated emergency calling grid. |
-| **Bystander Alert Mode** | `06_bystander_alert_mode.png` | High-visibility amber UI with camera flashlight strobe for roadside first responders. |
-| **Incident History** | `07_incident_history.png` | Historical incident log with confidence tier filter chips, search bar, and incident summary stats. |
-| **Incident Details & Vault** | `08_incident_details_vault.png` | Chronological incident timeline and cryptographic evidence status displaying **`VERIFIED`**. |
-| **Deterministic Report** | `09_deterministic_report.png` | Exportable structured JSON and plain-text incident summaries with non-authoritative advisory AI narratives. |
-| **Emergency Settings** | `10_emergency_settings.png` | Emergency contact management (up to 5 contacts), countdown duration slider (5–30s), and DND override toggle. |
+<table width="100%">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/01_home_dashboard.jpg" alt="Home Dashboard & Profile Selector" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>01. Home Dashboard & Profile Selector</b>
+      <p><i>Telematics launcher with profile calibration (Car Mount, Two-Wheeler, In-Pocket/Bag) and recent incident metrics.</i></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/02_active_drive_cockpit.jpg" alt="Active Drive Cockpit" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>02. Active Drive Cockpit</b>
+      <p><i>Live 50Hz sensor fusion HUD displaying instantaneous G-force, vehicle GPS speed, and safety alert trigger.</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/03_sensor_diagnostics.jpg" alt="Live Sensor Diagnostics" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>03. Live Sensor Diagnostics</b>
+      <p><i>High-frequency diagnostics showing real-time triaxial accelerometer and gyroscope streams and buffer capacity.</i></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/04_impact_countdown_alert.jpg" alt="Impact Alert Countdown" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>04. Impact Alert Countdown</b>
+      <p><i>10-second high-contrast alert countdown with Confidence Tier badge, audible sirens, and voice recognition.</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/05_emergency_assistance.jpg" alt="Emergency Assistance Screen" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>05. Emergency Assistance Screen</b>
+      <p><i>Accident coordinates, reverse-geocoded location, measured impact dynamics, and simulated emergency calling grid.</i></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/06_bystander_alert_mode.jpg" alt="Bystander SOS Mode" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>06. Bystander SOS Screen</b>
+      <p><i>High-visibility amber strobe screen with camera flashlight pulses (200ms) for night-time roadside responders.</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/07_incident_history.jpg" alt="Incident History Journal" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>07. Incident History Journal</b>
+      <p><i>Persistent local SQLite log with confidence tier filter chips (All, High, Medium, Low) and incident summary cards.</i></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/08_incident_details_vault.jpg" alt="Evidence Vault Verification" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>08. Evidence Vault & Verification</b>
+      <p><i>Hardware Keystore ECDSA signature and SHA-256 video hash showing green <b>VERIFIED</b> forensic status.</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/09_deterministic_report.jpg" alt="Deterministic Factual Report" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>09. Deterministic Factual Report</b>
+      <p><i>Structured incident report with Factual Text vs JSON toggle and non-authoritative advisory Gemini AI narrative.</i></p>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="assets/screenshots/10_emergency_settings.jpg" alt="Emergency Settings & Contacts" width="100%" style="max-width:320px; border-radius:8px;" />
+      <br />
+      <b>10. Emergency Settings & Contacts</b>
+      <p><i>Configurable countdown duration (5–30s), bystander alert preferences, DND override, and up to 5 SOS contacts.</i></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
