@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vigilo — Road Safety Intelligence</title>
+  <meta name="description" content="Vigilo is a mobile-first road-incident response platform for Android. Sensor fusion crash detection, real SMS dispatch, SHA-256 evidence integrity. Google DevFest Lucknow 2026.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="Vigilo home">
+      <img src="assets/vigilo_logo_hd.jpg" alt="Vigilo logo" class="nav-logo">
+      <span class="nav-wordmark">VIGILO</span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="#overview"     class="nav-link" role="menuitem">Overview</a>
+      <a href="#features"     class="nav-link" role="menuitem">Features</a>
+      <a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a>
+      <a href="#technology"   class="nav-link" role="menuitem">Technology</a>
+      <a href="#demo"         class="nav-link" role="menuitem">Evaluation</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="nav-github-link">Technical Showcase</a>
+      <a href="#demo" class="btn btn-primary btn-sm">Live Prototype</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile" role="menu">
+    <a href="#overview"     class="nav-link" role="menuitem">Overview</a>
+    <a href="#features"     class="nav-link" role="menuitem">Features</a>
+    <a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a>
+    <a href="#technology"   class="nav-link" role="menuitem">Technology</a>
+    <a href="#demo"         class="nav-link" role="menuitem">Evaluation</a>
+    <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="nav-link" role="menuitem">Technical Showcase</a>
+    <a href="#demo" class="btn btn-primary">Live Prototype</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Prototype &middot; Google DevFest Lucknow 2026
+      </div>
+      <h1 class="hero-title">Every second matters.<br><span class="accent">Every detail matters.</span></h1>
+      <p class="hero-sub">A smarter way to approach road-incident alerting, evidence preservation and AI-assisted incident reporting.</p>
+      <p class="hero-desc">Vigilo is a mobile-first road-incident response platform built on Kotlin and Jetpack Compose. It uses 50Hz sensor fusion, a configurable countdown alert, real GSM SMS dispatch and cryptographic evidence integrity — working entirely offline.</p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          Live Prototype
+        </a>
+        <a href="#technology" class="btn btn-outline">Explore the Technology</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" aria-hidden="true"><path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/></svg>
+          Offline-First Core
+        </span>
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          SHA-256 Evidence
+        </span>
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Privacy-Respecting
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-mockup" role="img" aria-label="Vigilo drive mode UI representation">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-status-bar"><span>09:41</span><span>&#9645;&#9645;&#9645;</span></div>
+          <div class="phone-drive-badge">DRIVE MODE ACTIVE</div>
+          <div class="phone-metric-card">
+            <div class="phone-metric-val">0.3<span style="font-size:0.7rem;color:#94A3B8;">G</span></div>
+            <div class="phone-metric-label">Current G-Force</div>
+          </div>
+          <div class="phone-metrics-row">
+            <div class="phone-metric-card">
+              <div class="phone-metric-val" style="font-size:1rem;">47</div>
+              <div class="phone-metric-label">km/h</div>
+            </div>
+            <div class="phone-metric-card">
+              <div class="phone-metric-val" style="font-size:1rem;">0.8<span style="font-size:0.6rem;color:#94A3B8;">G</span></div>
+              <div class="phone-metric-label">Peak G</div>
+            </div>
+          </div>
+          <div class="phone-status-row">
+            <div class="phone-status-item"><span class="phone-status-dot dot-green"></span>GPS Lock &middot; 4m accuracy</div>
+            <div class="phone-status-item"><span class="phone-status-dot dot-blue"></span>Sensors &middot; 50Hz</div>
+            <div class="phone-status-item"><span class="phone-status-dot dot-green"></span>Camera Armed</div>
+            <div class="phone-status-item"><span class="phone-status-dot dot-amber"></span>Session &middot; 00:12:34</div>
+          </div>
+          <div class="phone-stop-btn">STOP MONITORING</div>
+        </div>
+      </div>
+      <p class="phone-caption">Simulated UI representation<br>Actual screenshots pending</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section section--900" id="overview">
+  <div class="container">
+    <span class="section-label fade-up">The Problem</span>
+    <h2 class="section-title fade-up">When seconds matter, response gaps cost lives</h2>
+    <p class="section-sub fade-up">Road accidents create a narrow, critical window. The phone has all the information — GPS, sensors, time — but no mechanism to act on its own.</p>
+    <div class="problem-grid">
+      <div class="problem-card fade-up">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 class="problem-title">Silent Accidents</h3>
+        <p class="problem-desc">When a driver is incapacitated, there is no automatic mechanism for the phone to initiate a response. Every minute of delayed assistance matters in high-severity incidents.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="problem-title">Location Gap</h3>
+        <p class="problem-desc">Accurate location at the moment of impact is rarely preserved or communicated. Manual reporting under stress or injury is unreliable and often delayed.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 class="problem-title">Evidence Loss</h3>
+        <p class="problem-desc">Without structured capture, incident data degrades — sensor readings, GPS coordinates, and timing disappear. Post-incident disputes have no objective record to reference.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3 class="problem-title">Documentation Burden</h3>
+        <p class="problem-desc">Writing an accurate incident report while in shock is nearly impossible. Insurance claims and legal records suffer from incomplete post-hoc documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="section section--850">
+  <div class="container">
+    <span class="section-label fade-up">The Solution</span>
+    <h2 class="section-title fade-up">A connected mobile workflow for incident response</h2>
+    <p class="section-sub fade-up">Vigilo turns an ordinary smartphone into a passive safety monitor that only activates evidence-heavy behavior around a plausible incident — not continuously.</p>
+    <div class="pipeline fade-up">
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:rgba(2,132,199,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="pipeline-step-num">01</div>
+        <div class="pipeline-step-title">DETECT</div>
+        <div class="pipeline-step-desc">Rule-based sensor fusion identifies a possible impact event</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:rgba(220,38,38,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="pipeline-step-num">02</div>
+        <div class="pipeline-step-title">ALERT</div>
+        <div class="pipeline-step-desc">10-second countdown lets user respond by tap or voice</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:rgba(217,119,6,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <div class="pipeline-step-num">03</div>
+        <div class="pipeline-step-title">PRESERVE</div>
+        <div class="pipeline-step-desc">Sensor, GPS, video and SHA-256 evidence saved locally</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:rgba(37,99,235,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="pipeline-step-num">04</div>
+        <div class="pipeline-step-title">UNDERSTAND</div>
+        <div class="pipeline-step-desc">Optional Gemini AI layer — strictly advisory, never authoritative</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-icon" style="background:rgba(5,150,105,0.15);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" aria-hidden="true"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="pipeline-step-num">05</div>
+        <div class="pipeline-step-title">DOCUMENT</div>
+        <div class="pipeline-step-desc">Structured report exportable for insurance and legal use</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section section--900" id="features">
+  <div class="container">
+    <span class="section-label fade-up">Core Capabilities</span>
+    <h2 class="section-title fade-up">Every feature below is implemented in the working prototype</h2>
+    <p class="section-sub fade-up">Verified against the application source code. No fabricated capabilities.</p>
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3 class="feature-title">Sensor Fusion Detection</h3>
+        <p class="feature-desc">50Hz accelerometer + gyroscope pipeline scores impacts across 9 dimensions: peak G-force, jerk, rotational surge, post-impact stillness. Confidence tiers: HIGH / MEDIUM / LOW.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 class="feature-title">10-Second Countdown Alert</h3>
+        <p class="feature-desc">Full-screen alert with audio and haptic on every second. Plain-language kinematic explanation per detection. Three paths: I'm OK, False Alarm, I Need Help.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <h3 class="feature-title">Voice Command Recognition</h3>
+        <p class="feature-desc">Hands-free "I'm okay" and "I need help" responses during countdown. Critical for situations where the driver cannot physically reach the phone.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg></div>
+        <h3 class="feature-title">Real SMS Emergency Dispatch</h3>
+        <p class="feature-desc">GSM-based SMS to up to 5 configured emergency contacts — no internet required. Includes GPS coordinates, impact data and timestamp. Pure cellular protocol.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <h3 class="feature-title">SHA-256 Hardware Keystore Evidence</h3>
+        <p class="feature-desc">Each incident signed via Android Hardware Keystore. In-app verification shows VERIFIED / TAMPERED / UNVERIFIED. Structured for insurance and legal documentation.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3 class="feature-title">Post-Impact CameraX Video</h3>
+        <p class="feature-desc">Automatic audio-enabled video recording triggered by detection via CameraX. Evidence saved locally and tied to the incident record with integrity hash.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+        <h3 class="feature-title">Bystander Strobe Beacon</h3>
+        <p class="feature-desc">200ms torch oscillation and full-screen pulsing amber alert visible from distance. Displays GPS and impact details for passers-by and first responders.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 class="feature-title">AI-Assisted Incident Report</h3>
+        <p class="feature-desc">Gemini-powered plain-language summary — clearly marked as advisory, never authoritative. Export as JSON or plain text for IRDAI-compatible insurance claims.</p>
+        <span class="feature-badge badge-advisory">Implemented &middot; Advisory Layer</span>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+        <h3 class="feature-title">Offline-First Architecture</h3>
+        <p class="feature-desc">SQLite local storage — core detection, SMS dispatch and evidence signing need no internet. Mounting profiles (Dashboard, Cupholder, Pocket, Motorcycle) and on-device calibration.</p>
+        <span class="feature-badge badge-impl">Implemented</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--850" id="how-it-works">
+  <div class="container">
+    <span class="section-label fade-up">The Workflow</span>
+    <h2 class="section-title fade-up">The Incident Response Workflow</h2>
+    <p class="section-sub fade-up">From normal drive to evidence-preserved incident record. Every step runs on the device.</p>
+    <div class="workflow-steps">
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">1</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Start Drive Mode <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc">User taps "Begin Drive Monitoring" and selects a mounting profile. A foreground service activates sensors and GPS. The phone can be placed on the mount — no further interaction needed during a normal drive.</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">2</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Sensor Fusion Impact Detection <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc">The 50Hz pipeline evaluates fused accelerometer and gyroscope data. When a multi-axis event crosses scoring thresholds — high G-force, rotational surge, sudden stillness — an impact event is raised with a confidence tier (HIGH / MEDIUM / LOW).</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">3</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">10-Second Countdown Alert <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc">Full-screen alert with audio and haptic feedback. A plain-language explanation of the detection is shown. The user has 10 seconds to respond by tap or voice command ("I'm okay" or "I need help").</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">4</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Response Branch <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc"><strong style="color:#10B981;">I'm OK</strong> — monitoring resumes, incident logged as confirmed-OK. <strong style="color:#F59E0B;">False Alarm</strong> — calibration updated, diagnostic data retained. <strong style="color:#EF4444;">I Need Help</strong> or no response — Emergency Assistance screen activates. SMS dispatch is an explicit user action.</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">5</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Evidence Preservation <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc">Post-impact video (CameraX), sensor snapshot, and GPS coordinates saved locally. The evidence bundle is cryptographically signed with SHA-256 via Android Hardware Keystore. Integrity is verifiable in-app at any time.</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num">6</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Report and Export <span class="workflow-pill pill-impl">Implemented</span></h3>
+          <p class="workflow-desc">A structured incident report is generated — facts, calculated values, and optional Gemini AI narrative clearly separated. Exportable as JSON or plain text for insurance claims or police reports.</p>
+        </div>
+      </div>
+      <div class="workflow-step fade-up">
+        <div class="workflow-num" style="font-size:1.1rem;">&#x2731;</div>
+        <div class="workflow-content">
+          <h3 class="workflow-title">Emergency Call UI <span class="workflow-pill pill-sim">Simulated &middot; Design Decision</span></h3>
+          <p class="workflow-desc">The Emergency Assistance screen shows quick-dial buttons for Police (100), Ambulance (108), and highway helplines. These present a simulated call interface — they do not place a real call without explicit user action. An intentional ethical design decision: an application must never dial emergency services automatically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section--900" id="gallery">
+  <div class="container">
+    <span class="section-label fade-up">Application Screens</span>
+    <h2 class="section-title fade-up">UI Representations</h2>
+    <div class="gallery-note fade-up">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:1px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      CSS mockups representing the app UI structure and color system. Not actual screenshots. Vigilo runs on physical Android hardware — actual screenshots are pending capture.
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-phone fade-up">
+        <div class="gallery-mockup">
+          <div class="gal-notch"></div>
+          <div class="gal-content">
+            <div class="gal-label">Home</div>
+            <div class="gal-title-text">VIGILO</div>
+            <div class="gal-divider"></div>
+            <div class="gal-badge gal-badge-blue">MONITORING OFF</div>
+            <div class="gal-divider"></div>
+            <div class="gal-row"><span class="gal-key">Last session</span><span class="gal-val" style="font-size:0.62rem;">Yesterday</span></div>
+            <div class="gal-row"><span class="gal-key">Incidents</span><span class="gal-val" style="font-size:0.62rem;">0 today</span></div>
+            <div class="gal-divider"></div>
+            <div class="gal-btn-sim" style="background:rgba(37,99,235,0.2);color:#60A5FA;border:1px solid rgba(37,99,235,0.3);">START DRIVE MODE</div>
+          </div>
+        </div>
+        <span class="gallery-caption">Home Screen</span>
+      </div>
+      <div class="gallery-phone fade-up">
+        <div class="gallery-mockup">
+          <div class="gal-notch"></div>
+          <div class="gal-content">
+            <div class="gal-label">Active Monitoring</div>
+            <div class="gal-badge gal-badge-green">DRIVE ACTIVE</div>
+            <div style="text-align:center;background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.2);border-radius:8px;padding:6px;">
+              <div class="gal-big-num">0.3<span style="font-size:0.8rem;color:#94A3B8;">G</span></div>
+              <div class="gal-key">G-FORCE</div>
+            </div>
+            <div class="gal-row">
+              <div style="text-align:center;flex:1;"><div class="gal-val">47</div><div class="gal-key">km/h</div></div>
+              <div style="text-align:center;flex:1;"><div class="gal-val">0.8G</div><div class="gal-key">Peak</div></div>
+            </div>
+            <div class="gal-divider"></div>
+            <div class="gal-row"><span class="gal-key" style="color:#10B981;">&#x25CF;</span><span class="gal-key">GPS &middot; 4m</span></div>
+            <div class="gal-row"><span class="gal-key" style="color:#60A5FA;">&#x25CF;</span><span class="gal-key">50Hz sensors</span></div>
+          </div>
+        </div>
+        <span class="gallery-caption">Drive Mode Cockpit</span>
+      </div>
+      <div class="gallery-phone fade-up">
+        <div class="gallery-mockup" style="background:#1a0505;">
+          <div class="gal-notch" style="background:#0a0202;"></div>
+          <div class="gal-content">
+            <div class="gal-badge gal-badge-red" style="text-align:center;padding:4px 6px;">POSSIBLE IMPACT</div>
+            <div class="gal-countdown">
+              <div class="gal-key">TIME REMAINING</div>
+              <div class="gal-big-num">07</div>
+              <div class="gal-key">seconds</div>
+            </div>
+            <div style="text-align:center;font-family:var(--font-brand);font-size:0.68rem;font-weight:700;color:#fff;">Are you okay?</div>
+            <div class="gal-badge gal-badge-red" style="font-size:0.55rem;display:block;text-align:center;">HIGH CONFIDENCE</div>
+            <div class="gal-divider"></div>
+            <div class="gal-btn-sim" style="background:rgba(5,150,105,0.2);color:#10B981;border:1px solid rgba(5,150,105,0.3);margin-bottom:3px;">I'M OK</div>
+            <div class="gal-btn-sim" style="background:rgba(220,38,38,0.2);color:#EF4444;border:1px solid rgba(220,38,38,0.3);">I NEED HELP</div>
+          </div>
+        </div>
+        <span class="gallery-caption">Impact Alert Screen</span>
+      </div>
+      <div class="gallery-phone fade-up">
+        <div class="gallery-mockup">
+          <div class="gal-notch"></div>
+          <div class="gal-content">
+            <div class="gal-label">Incident Record</div>
+            <div class="gal-title-text">29 Oct 2026</div>
+            <div class="gal-badge gal-badge-red">HIGH &middot; 4.2G</div>
+            <div class="gal-divider"></div>
+            <div class="gal-row"><span class="gal-key">Peak G</span><span class="gal-val">4.2G</span></div>
+            <div class="gal-row"><span class="gal-key">Speed</span><span class="gal-val">62 km/h</span></div>
+            <div class="gal-divider"></div>
+            <div style="display:flex;align-items:center;gap:4px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              <span class="gal-key" style="color:#10B981;">VERIFIED</span>
+            </div>
+            <div class="gal-btn-sim" style="background:rgba(37,99,235,0.15);color:#60A5FA;border:1px solid rgba(37,99,235,0.25);margin-top:auto;">VIEW REPORT</div>
+          </div>
+        </div>
+        <span class="gallery-caption">Incident Details</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="section section--850" id="technology">
+  <div class="container">
+    <span class="section-label fade-up">Engineering</span>
+    <h2 class="section-title fade-up">Technology &amp; Architecture</h2>
+    <div class="tech-grid">
+      <div class="fade-up">
+        <p class="tech-desc">Vigilo uses a pragmatic, layered Clean-ish MVVM architecture — enough separation to keep safety-critical logic testable and isolated, without introducing more layers than a solo developer can maintain.</p>
+        <p class="tech-desc">The detection pipeline is a Flow transformation chain: sensor windowing, multi-axis feature extraction, and rule-based impact scoring running at 50Hz inside an Android foreground service. Core safety functions never require the network.</p>
+        <p class="tech-desc">Evidence integrity uses Android Hardware Keystore — private keys never leave the secure hardware enclave. SHA-256 signatures are computed at the moment of incident capture and stored alongside raw sensor data.</p>
+        <div class="arch-diagram">
+          <div class="arch-title">Application Layers</div>
+          <div class="arch-layer" style="background:rgba(37,99,235,0.12);color:#60A5FA;"><span>UI &mdash; Jetpack Compose Screens</span><span style="font-size:0.68rem;color:#475569;">state / events</span></div>
+          <div class="arch-arrow">&#x2193;</div>
+          <div class="arch-layer" style="background:rgba(37,99,235,0.08);color:#93C5FD;"><span>ViewModels &mdash; StateFlow / UiState</span><span style="font-size:0.68rem;color:#475569;">viewModelScope</span></div>
+          <div class="arch-arrow">&#x2193;</div>
+          <div class="arch-layer" style="background:rgba(2,132,199,0.12);color:#38BDF8;"><span>Domain &mdash; Impact Detection &middot; State Machine</span><span style="font-size:0.68rem;color:#475569;">pure Kotlin</span></div>
+          <div class="arch-arrow">&#x2193;</div>
+          <div class="arch-layer" style="background:rgba(5,150,105,0.10);color:#34D399;"><span>Repositories &mdash; Incident &middot; Sensor &middot; Evidence</span><span style="font-size:0.68rem;color:#475569;">interfaces</span></div>
+          <div class="arch-arrow">&#x2193;</div>
+          <div class="arch-layer" style="background:rgba(217,119,6,0.10);color:#FCD34D;"><span>Data Sources &mdash; Room &middot; CameraX &middot; SensorManager</span><span style="font-size:0.68rem;color:#475569;">Android APIs</span></div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <p class="tech-desc" style="margin-bottom:1rem;">Technology stack — verified from build configuration:</p>
+        <div class="tech-stack-pills">
+          <span class="tech-pill">Kotlin</span><span class="tech-pill">Jetpack Compose</span><span class="tech-pill">MVVM Architecture</span><span class="tech-pill">Room Database</span><span class="tech-pill">Android Foreground Service</span><span class="tech-pill">CameraX</span><span class="tech-pill">SensorManager &middot; 50Hz</span><span class="tech-pill">FusedLocationProvider</span><span class="tech-pill">Android Hardware Keystore</span><span class="tech-pill">SHA-256 Signing</span><span class="tech-pill">Gemini API</span><span class="tech-pill">GSM SMS</span><span class="tech-pill">Kotlin Coroutines &middot; Flow</span><span class="tech-pill">Navigation Compose</span><span class="tech-pill">SQLite &middot; Room DAOs</span>
+        </div>
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--slate-900);border-radius:12px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-family:var(--font-mono);font-size:0.7rem;color:#475569;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">What Makes It Different</div>
+          <div style="display:flex;flex-direction:column;gap:0.65rem;">
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Local-first &mdash; no cloud for the safety-critical path</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Explainable detections &mdash; plain-language reason per alert</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI strictly advisory &mdash; raw sensor facts are immutable</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Two-wheeler and car aware via mounting profiles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGES -->
+<section class="section section--900">
+  <div class="container">
+    <span class="section-label fade-up">Honest Engineering</span>
+    <h2 class="section-title fade-up">Engineering Challenges</h2>
+    <p class="section-sub fade-up">A realistic account of the hard problems in this prototype and how they were approached.</p>
+    <div class="challenges-grid">
+      <div class="challenge-card fade-up">
+        <div class="challenge-num">01</div>
+        <h3 class="challenge-title">False Alarm Discrimination</h3>
+        <p class="challenge-desc">Distinguishing a real impact from a speed bump, pothole, phone drop, or aggressive braking at 50Hz sampling. Solved through multi-axis scoring across 9 dimensions, mounting-profile sensitivity calibration, and a false alarm feedback loop that updates on-device thresholds.</p>
+      </div>
+      <div class="challenge-card fade-up">
+        <div class="challenge-num">02</div>
+        <h3 class="challenge-title">Offline-First Reliability</h3>
+        <p class="challenge-desc">All safety-critical features — detection, countdown, SMS dispatch, evidence signing — must work without internet. The AI interpretation layer degrades gracefully when offline. Every degraded state is surfaced visibly in the UI, never silently hidden.</p>
+      </div>
+      <div class="challenge-card fade-up">
+        <div class="challenge-num">03</div>
+        <h3 class="challenge-title">Evidence Integrity from Consumer Hardware</h3>
+        <p class="challenge-desc">Producing legally defensible incident records from an ordinary smartphone. SHA-256 Hardware Keystore signing ensures private keys never leave the secure enclave. Raw data, calculated values, and AI interpretation remain in strictly separate, immutable layers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO / EVALUATION -->
+<section class="section section--850" id="demo">
+  <div class="container">
+    <span class="section-label fade-up">Prototype Evaluation</span>
+    <h2 class="section-title fade-up">Hardware Demonstration</h2>
+    <div class="demo-card fade-up">
+      <div class="demo-play-btn" role="img" aria-label="Physical Android device prototype" style="background:rgba(37,99,235,0.15);border:2px solid rgba(96,165,250,0.5);">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      </div>
+      <h3 class="demo-title">Physical Android Device Prototype</h3>
+      <p class="demo-sub">Vigilo is evaluated directly on physical Android testbeds to validate real-world 50Hz sensor fusion, vibration dampening, and offline GSM dispatch. For Google DevFest evaluators, technical reviewers, and partners, guided interactive walkthroughs and live hardware sessions are available upon request.</p>
+      <div class="demo-actions">
+        <a href="#contact" class="btn btn-primary">Request Guided Walkthrough</a>
+        <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explore Technical Specs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section class="section section--900" id="status">
+  <div class="container">
+    <span class="section-label fade-up">Prototype Status</span>
+    <h2 class="section-title fade-up">Be Informed</h2>
+    <div class="status-card fade-up">
+      Vigilo is a working Android prototype demonstrating the complete incident detection workflow on real hardware. It is <strong>not a certified emergency service</strong>, not a production-validated life-safety system, and not publicly distributed. Core features are implemented and testable on physical devices.
+    </div>
+    <div style="overflow-x:auto;" class="fade-up">
+      <table class="status-table">
+        <thead><tr><th>Capability</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Sensor Fusion Detection (50Hz)</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Countdown Alert (audio + haptic)</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Voice Command Recognition</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Real GSM SMS Dispatch</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>SHA-256 Evidence (Hardware Keystore)</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>CameraX Post-Impact Video</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Bystander Strobe Beacon</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>AI Incident Report (Gemini, advisory)</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Offline-First SQLite Storage</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Emergency Call UI</td><td class="status-sim">Simulated &middot; Ethical Design</td></tr>
+          <tr><td>Pre-Impact Rolling Buffer</td><td class="status-no">Post-MVP Planned</td></tr>
+          <tr><td>Cloud Sync / Multi-Device</td><td class="status-no">Not in MVP Scope</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- IP -->
+<section class="section section--850" id="source">
+  <div class="container">
+    <span class="section-label fade-up">Source Code &amp; IP</span>
+    <h2 class="section-title fade-up">Intellectual Property &amp; Repository</h2>
+    <p class="section-sub fade-up">The main application repository is private. A transparent account of why — and what is publicly available.</p>
+    <div class="ip-grid">
+      <div class="fade-up">
+        <h3 class="ip-block-title">Why the Main Repository is Private</h3>
+        <div class="ip-list">
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span><span><strong style="color:#fff;">Proprietary detection logic.</strong> The sensor fusion algorithm, 9-dimensional scoring parameters, and mounting-profile calibration represent original engineering work under active development.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><span><strong style="color:#fff;">Security attack surface.</strong> Publishing exact thresholds and decision logic could allow adversarial inputs designed to suppress or trigger detections.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></span><span><strong style="color:#fff;">Commercial pathway.</strong> Vigilo is on a commercial development track. Partnership and licensing discussions are active.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14 2z"/><polyline points="14 2 14 8 20 8"/></svg></span><span><strong style="color:#fff;">Pre-publication protection.</strong> Novel components may be subjects of future patent applications. Pre-filing public disclosure affects patentability.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><span><strong style="color:#fff;">Safety forks prevention.</strong> An unmaintained fork of a safety application could cause harm if deployed without the full design principle context.</span></div>
+        </div>
+      </div>
+      <div class="fade-up">
+        <h3 class="ip-block-title">What IS Publicly Available</h3>
+        <div class="ip-list">
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span>Public documentation repository on GitHub — architecture documentation and technical specification, no source code.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span>This product case study website — a full description of the workflow, features and engineering approach.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span>Live demo access on request for qualified technical reviewers, evaluators, and potential partners.</span></div>
+          <div class="ip-item"><span class="ip-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span><span>Open engineering conversation — technical questions from legitimate reviewers are welcome via the contact form.</span></div>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            View Public Repository
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPER -->
+<section class="section section--900">
+  <div class="container" style="text-align:center;">
+    <span class="section-label fade-up" style="justify-content:center;">Built by</span>
+    <h2 class="section-title fade-up">The Developer</h2>
+    <div class="dev-card fade-up">
+      <div class="dev-avatar">BV</div>
+      <div class="dev-name">Bhvya Vaish</div>
+      <div class="dev-role">Android Developer &middot; Product Designer &middot; Systems Thinker</div>
+      <p class="dev-bio">Vigilo is a solo-developed Android prototype created with Kotlin, Jetpack Compose, and the Google AI ecosystem. Presented at Google DevFest Lucknow 2026 as a product showcase demonstrating real sensor fusion, evidence integrity and responsible AI integration.</p>
+      <div class="dev-links">
+        <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="dev-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+        <a href="https://bhvyavaish.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Portfolio</a>
+        <a href="https://www.linkedin.com/in/bhvya-vaish/" target="_blank" rel="noopener noreferrer" class="dev-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label fade-up" style="justify-content:center;">Get Involved</span>
+    <h2 class="section-title fade-up">Interested in Vigilo?</h2>
+    <p class="section-sub fade-up">Whether you are a potential partner, a technical reviewer, or a fellow developer — we would love to hear from you.</p>
+    <div class="cta-actions fade-up">
+      <a href="#contact" class="btn btn-white">Contact Us</a>
+      <a href="business.html" class="btn btn-outline">For Enterprise &amp; Partners</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section--900" id="contact">
+  <div class="container">
+    <span class="section-label fade-up">Get in Touch</span>
+    <h2 class="section-title fade-up">Send a Message</h2>
+    <div class="contact-grid">
+      <div class="fade-up">
+        <h3 class="contact-info-title">We read everything</h3>
+        <p class="contact-info-sub">Use this form for general inquiries, technical questions, partnership discussions, demo requests, or DevFest feedback.</p>
+        <div class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>We respond within 48 hours</div>
+        <div class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>All conversations are confidential</div>
+        <div class="contact-detail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Demo requests prioritized</div>
+      </div>
+      <div class="fade-up">
+        <div class="contact-form-wrap">
+          <div id="formFields">
+            <form id="contactForm" action="https://formsubmit.co/codenest.alpha@gmail.com" method="POST" target="hidden_iframe">
+              <input type="hidden" name="_subject" value="Vigilo Website &mdash; New Inquiry">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="box">
+              <input type="hidden" name="_next" value="">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="c-name">Name *</label>
+                  <input class="form-input" type="text" id="c-name" name="name" placeholder="Your name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="c-email">Email *</label>
+                  <input class="form-input" type="email" id="c-email" name="email" placeholder="you@example.com" required autocomplete="email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="c-subject">Subject</label>
+                <select class="form-select" id="c-subject" name="subject">
+                  <option>General Inquiry</option>
+                  <option>Technical Review</option>
+                  <option>Partnership</option>
+                  <option>Demo Request</option>
+                  <option>DevFest Feedback</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="c-message">Message *</label>
+                <textarea class="form-textarea" id="c-message" name="message" placeholder="Tell us what you have in mind..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="formSubmitBtn">Send Message</button>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="form-success-title">Message sent successfully</div>
+            <p class="form-success-text">Thank you for reaching out. We will respond within 48 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<iframe name="hidden_iframe" style="display:none;" aria-hidden="true" onload="window.iframeLoaded && window.iframeLoaded()"></iframe>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-brand" style="display:inline-flex;margin-bottom:0.5rem;">
+        <img src="assets/vigilo_logo_hd.jpg" alt="Vigilo" class="nav-logo" style="width:28px;height:28px;">
+        <span class="nav-wordmark" style="font-size:0.95rem;">VIGILO</span>
+      </a>
+      <p class="footer-tagline">Road Safety Intelligence &middot; Android Prototype<br>Built for Google DevFest Lucknow 2026</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Product</div>
+      <div class="footer-links">
+        <a href="#overview" class="footer-link">Overview</a>
+        <a href="#features" class="footer-link">Features</a>
+        <a href="#how-it-works" class="footer-link">How It Works</a>
+        <a href="#technology" class="footer-link">Technology</a>
+        <a href="#demo" class="footer-link">Evaluation</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Connect</div>
+      <div class="footer-links" style="margin-bottom:1rem;">
+        <a href="business.html" class="footer-link">For Enterprise</a>
+        <a href="#contact" class="footer-link">Contact</a>
+        <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/bhvya-vaish/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://bhvyavaish.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Portfolio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Vigilo. Prototype. Not a certified emergency service.</span>
+    <span>Google DevFest Lucknow 2026</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
