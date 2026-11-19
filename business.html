@@ -14,18 +14,19 @@
 <!-- NAV -->
 <nav class="nav scrolled" id="mainNav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="Back to Vigilo product site">
+    <a href="index.html" class="nav-brand" aria-label="Vigilo Home">
       <img src="assets/vigilo_logo_hd.jpg" alt="Vigilo logo" class="nav-logo">
       <span class="nav-wordmark">VIGILO</span>
     </a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link">&#8592; Product Site</a>
-      <a href="#solutions"   class="nav-link">Solutions</a>
-      <a href="#pricing"     class="nav-link">Pricing</a>
-      <a href="#biz-contact" class="nav-link">Contact</a>
+    <div class="nav-links" role="menubar">
+      <a href="index.html"   class="nav-link" role="menuitem">&larr; Product Showcase</a>
+      <a href="#solutions"   class="nav-link" role="menuitem">Solutions</a>
+      <a href="#pricing"     class="nav-link" role="menuitem">Pricing</a>
+      <a href="#biz-contact" class="nav-link" role="menuitem">Contact</a>
     </div>
     <div class="nav-actions">
-      <span class="biz-badge" style="margin:0;font-family:var(--font-mono);">ENTERPRISE</span>
+      <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="nav-github-link">Docs Repo</a>
+      <a href="index.html" class="btn btn-outline btn-sm">&larr; Product Site</a>
       <a href="#biz-contact" class="btn btn-primary btn-sm">Partner with Us</a>
     </div>
     <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -33,22 +34,29 @@
     </button>
   </div>
   <div class="nav-mobile" id="navMobile" role="menu">
-    <a href="index.html"   class="nav-link">&#8592; Product Site</a>
-    <a href="#solutions"   class="nav-link">Solutions</a>
-    <a href="#pricing"     class="nav-link">Pricing</a>
-    <a href="#biz-contact" class="nav-link">Contact</a>
+    <a href="index.html"   class="nav-link" role="menuitem">&larr; Product Showcase</a>
+    <a href="#solutions"   class="nav-link" role="menuitem">Solutions</a>
+    <a href="#pricing"     class="nav-link" role="menuitem">Pricing</a>
+    <a href="#biz-contact" class="nav-link" role="menuitem">Contact</a>
+    <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="nav-link" role="menuitem">GitHub Showcase</a>
     <a href="#biz-contact" class="btn btn-primary">Partner with Us</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="biz-hero">
-  <div class="container" style="position:relative;z-index:1;">
-    <a href="index.html" class="biz-back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-      Back to Product Showcase
-    </a>
-    <div class="biz-badge">VIGILO ENTERPRISE &amp; PARTNERS</div>
+  <div class="container" style="position:relative;z-index:1;text-align:center;">
+    <div class="site-page-switcher" style="margin-bottom:1.5rem;" role="tablist" aria-label="Website Page Switcher">
+      <span class="switcher-label">View</span>
+      <a href="index.html" class="switcher-pill" role="tab" aria-selected="false">
+        Product Showcase
+      </a>
+      <a href="business.html" class="switcher-pill active" role="tab" aria-selected="true">
+        <span class="switcher-dot"></span>
+        Enterprise &amp; Fleet
+      </a>
+    </div>
+    <div class="biz-badge" style="display:inline-block;">VIGILO ENTERPRISE &amp; FLEET SOLUTIONS</div>
     <h1 class="section-title" style="max-width:700px;margin:0 auto 1rem;text-align:center;">Partner with Vigilo</h1>
     <p class="section-sub" style="max-width:580px;margin:0 auto 2.5rem;text-align:center;">We are actively seeking partnerships, licensing agreements, and enterprise integrations. Vigilo's road safety intelligence layer is designed to embed into fleet management, insurance, and mobility platforms.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
@@ -224,35 +232,52 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-inner">
+  <div class="footer-inner" style="grid-template-columns: 1.5fr 1fr 1fr 1fr;">
     <div class="footer-brand">
       <a href="index.html" class="nav-brand" style="display:inline-flex;margin-bottom:0.5rem;">
         <img src="assets/vigilo_logo_hd.jpg" alt="Vigilo" class="nav-logo" style="width:28px;height:28px;">
         <span class="nav-wordmark" style="font-size:0.95rem;">VIGILO</span>
       </a>
-      <p class="footer-tagline">Road Safety Intelligence &middot; Android Prototype<br>Built for Google DevFest Lucknow 2026</p>
+      <p class="footer-tagline">Road Safety Intelligence &middot; Android Prototype<br>Built for Google DevFest Lucknow 2026.<br>Configured for high-speed edge hosting on Vercel.</p>
     </div>
     <div>
-      <div class="footer-col-title">Enterprise</div>
+      <div class="footer-col-title">Showcase</div>
       <div class="footer-links">
-        <a href="#solutions"   class="footer-link">Solutions</a>
-        <a href="#pricing"     class="footer-link">Pricing</a>
-        <a href="#biz-contact" class="footer-link">Contact</a>
-        <a href="index.html"   class="footer-link">Product Site</a>
+        <a href="index.html#overview" class="footer-link">Overview</a>
+        <a href="index.html#features" class="footer-link">Core Features</a>
+        <a href="index.html#how-it-works" class="footer-link">Detection Loop</a>
+        <a href="index.html#technology" class="footer-link">Tech Stack</a>
+        <a href="index.html#demo" class="footer-link">Device Screenshots</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">Developer</div>
+      <div class="footer-col-title">Enterprise &amp; B2B</div>
+      <div class="footer-links">
+        <a href="business.html#solutions" class="footer-link">Fleet Telematics</a>
+        <a href="business.html#solutions" class="footer-link">Insurance Tech</a>
+        <a href="business.html#solutions" class="footer-link">White-Label Engine</a>
+        <a href="business.html#pricing" class="footer-link">Licensing Tiers</a>
+        <a href="business.html#biz-contact" class="footer-link">Partner Inquiry</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Developer &amp; Links</div>
       <div class="footer-links" style="margin-bottom:1rem;">
-        <a href="https://github.com/bhvyavaish/" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-        <a href="https://bhvyavaish.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-link">Portfolio</a>
-        <a href="https://www.linkedin.com/in/bhvya-vaish/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Docs Repo</a>
+        <a href="https://github.com/BhvyaVaish/vigilo-showcase/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer" class="footer-link">Architecture Spec</a>
+        <a href="https://github.com/BhvyaVaish/vigilo-showcase/blob/main/PROJECT_STATUS.md" target="_blank" rel="noopener noreferrer" class="footer-link">Audit &amp; Status</a>
+        <a href="index.html#contact" class="footer-link">General Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <a href="https://www.linkedin.com/in/bhvya-vaish/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://bhvyavaish.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Portfolio"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 Vigilo. Prototype. Not a certified emergency service.</span>
-    <span>Google DevFest Lucknow 2026</span>
+    <span>Google DevFest Lucknow 2026 &middot; Hosted on Vercel</span>
   </div>
 </footer>
 

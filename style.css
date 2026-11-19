@@ -324,3 +324,76 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .why-title { font-family: var(--font-brand); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
 .why-desc { font-size: 0.85rem; color: var(--slate-400); line-height: 1.6; }
 @media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
+
+
+/* ── Unified Page Switcher & Sub-Nav ───────────────────────── */
+.site-page-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 6px;
+  border-radius: 100px;
+  backdrop-filter: blur(14px);
+  margin-bottom: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.switcher-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--slate-400);
+  padding-left: 0.75rem;
+  padding-right: 0.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.switcher-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-family: var(--font-brand);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--slate-300);
+  transition: all 0.22s ease;
+  text-decoration: none;
+}
+.switcher-pill:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+.switcher-pill.active {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+}
+.switcher-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+}
+.nav-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(37, 99, 235, 0.25);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  color: var(--blue-light);
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.nav-link--enterprise {
+  color: var(--slate-200);
+}
+.nav-link--enterprise:hover {
+  color: var(--blue-light);
+}
