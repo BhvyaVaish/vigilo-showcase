@@ -19,7 +19,7 @@
 
 > [!IMPORTANT]
 > **Prototype Status & Evaluation Notice**  
-> Vigilo is currently an engineering prototype under active development and evaluation for the **Google DevFest Lucknow Product Showcase**. It serves as an exploratory telematics architecture. It is an algorithmic safety aid, not an industrial life-safety system, and does not claim to replace factory-installed vehicle telematics or official emergency dispatch infrastructure.
+> Vigilo is an engineering prototype under active development and evaluation as a smart road-incident response platform. It serves as an exploratory telematics architecture. It is an algorithmic safety aid, not an industrial life-safety system, and does not claim to replace factory-installed vehicle telematics or official emergency dispatch infrastructure.
 
 ---
 
@@ -49,7 +49,7 @@ Operating entirely on-device with an offline-first architecture, Vigilo continuo
 
 * 🌐 **Live Website (Vercel):** [https://vigilo-showcase.vercel.app](https://vigilo-showcase.vercel.app)
 * 💼 **Enterprise & Partners:** [https://vigilo-showcase.vercel.app/enterprise](https://vigilo-showcase.vercel.app/enterprise)
-* 📱 **Interactive Demonstration:** Available for in-person interactive walkthrough and guided inspection at Google DevFest Lucknow (see [`docs/demonstration-guide.md`](docs/demonstration-guide.md))
+* 📱 **Interactive Demonstration:** Available for technical walkthrough and guided inspection (see [`docs/demonstration-guide.md`](docs/demonstration-guide.md))
 * 📐 **Deep Architecture Documentation:** [`docs/architecture.md`](docs/architecture.md)
 * 📋 **Current Project Verification Matrix:** [`PROJECT_STATUS.md`](PROJECT_STATUS.md)
 
@@ -394,7 +394,7 @@ Vigilo is designed as an **offline-first, privacy-respecting telematics terminal
 
 ## Demonstration
 
-Vigilo includes a structured, self-contained **3-Minute Demonstration Flow** for evaluators and DevFest attendees:
+Vigilo includes a structured, self-contained **3-Minute Demonstration Flow** for evaluators and technical reviewers:
 
 ```
 [0:00 - 0:30] Problem & Context (Incapacitation & telematics gap)
@@ -428,4 +428,4 @@ Vigilo was designed, engineered, and prototyped by **Bhvya Vaish**, an Android t
 * 💼 **LinkedIn:** [https://www.linkedin.com/in/bhvya-vaish/](https://www.linkedin.com/in/bhvya-vaish/)
 * 🐙 **GitHub:** [https://github.com/bhvyavaish/](https://github.com/bhvyavaish/)
 
-*For technical inquiries, academic evaluation, or DevFest collaboration, please connect via LinkedIn or the portfolio portal.*
+*For technical inquiries, academic evaluation, or engineering collaboration, please connect via LinkedIn or the portfolio portal.*

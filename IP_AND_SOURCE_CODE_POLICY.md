@@ -2,7 +2,7 @@
 
 ## 1. Purpose of This Showcase Repository
 
-This repository (`vigilo-showcase`) is a dedicated **public technical documentation and systems architecture showcase** for the **Vigilo** road safety platform. It has been prepared for presentation to technical reviewers, industry evaluators, Google DevFest attendees, and potential engineering partners.
+This repository (`vigilo-showcase`) is a dedicated **public technical documentation and systems architecture showcase** for the **Vigilo** road safety platform. It has been prepared for presentation to technical reviewers, industry evaluators, systems engineers, and potential technology partners.
 
 This repository serves to document the problem space, architectural choices, sensor fusion heuristics, cryptographic verification pipelines, and verified capabilities of the Vigilo prototype.
 

@@ -1,6 +1,6 @@
 # 3-Minute Live Demonstration Script
 
-This document provides a structured, live-demonstration walkthrough designed for presentations at **Google DevFest Lucknow**, product showcase evaluations, and technical interviews.
+This document provides a structured, live-demonstration walkthrough designed for technical evaluations, product showcase presentations, and peer reviews.
 
 **Total Duration:** 3 minutes (180 seconds)  
 **Safety Rule:** Never trigger an actual emergency call or contact municipal emergency services during this demonstration.
