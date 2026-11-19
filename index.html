@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vigilo — Road Safety Intelligence</title>
-  <meta name="description" content="Vigilo is a mobile-first road-incident response platform for Android. Sensor fusion crash detection, real SMS dispatch, SHA-256 evidence integrity, and AI-assisted reporting.">
+  <meta name="description" content="Vigilo is a mobile road-incident response and evidence preservation platform. Intelligent incident alerting, tamper-proof digital evidence capture, and claims-ready incident reporting.">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=3">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=3">
   <link rel="icon" type="image/png" href="assets/vigilo_logo_cropped.png?v=3">
@@ -27,7 +27,7 @@
       <a href="#overview"     class="nav-link" role="menuitem">Overview</a>
       <a href="#features"     class="nav-link" role="menuitem">Features</a>
       <a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a>
-      <a href="#technology"   class="nav-link" role="menuitem">Technology</a>
+      <a href="#technology"   class="nav-link" role="menuitem">Evidence Vault</a>
       <a href="#demo"         class="nav-link" role="menuitem">Screenshots</a>
       <a href="business.html" class="nav-link nav-link--enterprise" role="menuitem">Enterprise <span class="nav-badge">B2B</span></a>
     </div>
@@ -44,7 +44,7 @@
     <a href="#overview"     class="nav-link" role="menuitem">Overview</a>
     <a href="#features"     class="nav-link" role="menuitem">Features</a>
     <a href="#how-it-works" class="nav-link" role="menuitem">How It Works</a>
-    <a href="#technology"   class="nav-link" role="menuitem">Technology</a>
+    <a href="#technology"   class="nav-link" role="menuitem">Evidence Vault</a>
     <a href="#demo"         class="nav-link" role="menuitem">Screenshots</a>
     <a href="business.html" class="nav-link nav-link--enterprise" role="menuitem">Enterprise &amp; Fleet <span class="nav-badge">B2B</span></a>
     <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="nav-link" role="menuitem">GitHub Showcase</a>
@@ -72,13 +72,13 @@
       </div>
       <h1 class="hero-title">Every second matters.<br><span class="accent">Every detail matters.</span></h1>
       <p class="hero-sub">A smarter way to approach road-incident alerting, evidence preservation and AI-assisted incident reporting.</p>
-      <p class="hero-desc">Vigilo is a mobile-first road-incident response platform built on Kotlin and Jetpack Compose. It uses 50Hz sensor fusion, a configurable countdown alert, real GSM SMS dispatch and cryptographic evidence integrity — working entirely offline.</p>
+      <p class="hero-desc">Vigilo is an intelligent road-incident response and evidence preservation platform. It pairs automated incident alerting and countdown verification with tamper-proof digital evidence capture and claims-ready reporting — engineered to operate completely offline.</p>
       <div class="hero-actions">
         <a href="#demo" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           Live Prototype
         </a>
-        <a href="#technology" class="btn btn-outline">Explore the Technology</a>
+        <a href="#technology" class="btn btn-outline">Evidence Architecture</a>
       </div>
       <div class="hero-trust">
         <span class="trust-item">
@@ -117,14 +117,14 @@
           </div>
           <div class="phone-status-row">
             <div class="phone-status-item"><span class="phone-status-dot dot-green"></span>GPS Lock &middot; 4m accuracy</div>
-            <div class="phone-status-item"><span class="phone-status-dot dot-blue"></span>Sensors &middot; 50Hz</div>
+            <div class="phone-status-item"><span class="phone-status-dot dot-blue"></span>Telemetry &middot; Armed</div>
             <div class="phone-status-item"><span class="phone-status-dot dot-green"></span>Camera Armed</div>
             <div class="phone-status-item"><span class="phone-status-dot dot-amber"></span>Session &middot; 00:12:34</div>
           </div>
           <div class="phone-stop-btn">STOP MONITORING</div>
         </div>
       </div>
-      <p class="phone-caption">Active Cockpit &middot; 50Hz Sensor Fusion Simulation</p>
+      <p class="phone-caption">Active Cockpit &middot; Real-Time Incident Monitoring</p>
     </div>
   </div>
 </section>
@@ -228,56 +228,56 @@
     <div class="features-grid">
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <h3 class="feature-title">Sensor Fusion Detection</h3>
-        <p class="feature-desc">50Hz accelerometer + gyroscope pipeline scores impacts across 9 dimensions: peak G-force, jerk, rotational surge, post-impact stillness. Confidence tiers: HIGH / MEDIUM / LOW.</p>
+        <h3 class="feature-title">Intelligent Impact Alerting</h3>
+        <p class="feature-desc">Continuously analyzes vehicle motion patterns to detect severe impacts, sudden deceleration, and vehicle instability, automatically initiating the emergency response sequence.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h3 class="feature-title">10-Second Countdown Alert</h3>
-        <p class="feature-desc">Full-screen alert with audio and haptic on every second. Plain-language kinematic explanation per detection. Three paths: I'm OK, False Alarm, I Need Help.</p>
+        <h3 class="feature-title">10-Second Countdown &amp; Cancellation</h3>
+        <p class="feature-desc">Full-screen visual and haptic alert. Voice response ("I'm okay" / "I need help") and one-tap controls allow immediate cancellation before emergency alerts are dispatched.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
-        <h3 class="feature-title">Voice Command Recognition</h3>
-        <p class="feature-desc">Hands-free "I'm okay" and "I need help" responses during countdown. Critical for situations where the driver cannot physically reach the phone.</p>
+        <h3 class="feature-title">Hands-Free Voice Recognition</h3>
+        <p class="feature-desc">Hands-free voice recognition for "I'm okay" or "I need help" during the emergency countdown, critical when a driver cannot physically reach or hold the device.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14z"/></svg></div>
-        <h3 class="feature-title">Real SMS Emergency Dispatch</h3>
-        <p class="feature-desc">GSM-based SMS to up to 5 configured emergency contacts — no internet required. Includes GPS coordinates, impact data and timestamp. Pure cellular protocol.</p>
+        <h3 class="feature-title">Direct Cellular Emergency Dispatch</h3>
+        <p class="feature-desc">Dispatches direct SMS alerts to up to 5 designated emergency contacts with precise road locus, impact time, and emergency map link without requiring mobile internet or data plans.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-        <h3 class="feature-title">SHA-256 Hardware Keystore Evidence</h3>
-        <p class="feature-desc">Each incident signed via Android Hardware Keystore. In-app verification shows VERIFIED / TAMPERED / UNVERIFIED. Structured for insurance and legal documentation.</p>
+        <h3 class="feature-title">Tamper-Proof Evidence Vault</h3>
+        <p class="feature-desc">Captures a sealed digital record of the incident &mdash; including motion telemetry, road locus coordinates, and exact timestamps. In-app verification proves the evidence is authentic and unmodified.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-        <h3 class="feature-title">Post-Impact CameraX Video</h3>
-        <p class="feature-desc">Automatic audio-enabled video recording triggered by detection via CameraX. Evidence saved locally and tied to the incident record with integrity hash.</p>
+        <h3 class="feature-title">Automated Scene Video &amp; Audio</h3>
+        <p class="feature-desc">Automatically captures contextual audio and video documentation at the moment of an incident. Secured locally as objective proof of road, traffic, and vehicle conditions.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
-        <h3 class="feature-title">Bystander Strobe Beacon</h3>
-        <p class="feature-desc">200ms torch oscillation and full-screen pulsing amber alert visible from distance. Displays GPS and impact details for passers-by and first responders.</p>
+        <h3 class="feature-title">Bystander Emergency Beacon</h3>
+        <p class="feature-desc">High-visibility optical torch strobe and pulsing amber screen display visible from distance. Communicates exact road coordinates and incident status to passing responders.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3 class="feature-title">AI-Assisted Incident Report</h3>
-        <p class="feature-desc">Gemini-powered plain-language summary — clearly marked as advisory, never authoritative. Export as JSON or plain text for IRDAI-compatible insurance claims.</p>
+        <h3 class="feature-title">Claims Dossier &amp; Incident Summary</h3>
+        <p class="feature-desc">Generates a structured, exportable incident dossier with chronological facts, impact measurements, and an advisory summary formatted for rapid insurance claims and legal documentation.</p>
         <span class="feature-badge badge-advisory">Implemented &middot; Advisory Layer</span>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-        <h3 class="feature-title">Offline-First Architecture</h3>
-        <p class="feature-desc">SQLite local storage — core detection, SMS dispatch and evidence signing need no internet. Mounting profiles (Dashboard, Cupholder, Pocket, Motorcycle) and on-device calibration.</p>
+        <h3 class="feature-title">Complete Offline Reliability</h3>
+        <p class="feature-desc">All incident detection, evidence sealing, and emergency dispatch execute directly on the device with zero cloud or internet dependency, ensuring protection even in remote connectivity dead zones.</p>
         <span class="feature-badge badge-impl">Implemented</span>
       </div>
     </div>
@@ -312,7 +312,7 @@
         <div class="workflow-num">2</div>
         <div class="workflow-content">
           <h3 class="workflow-title">Sensor Fusion Impact Detection <span class="workflow-pill pill-impl">Implemented</span></h3>
-          <p class="workflow-desc">The 50Hz pipeline evaluates fused accelerometer and gyroscope data. When a multi-axis event crosses scoring thresholds — high G-force, rotational surge, sudden stillness — an impact event is raised with a confidence tier (HIGH / MEDIUM / LOW).</p>
+          <p class="workflow-desc">On-device motion intelligence evaluates multi-axis vehicle movement in real time. When an abnormal collision signature, sudden deceleration, or rollover pattern occurs, an incident event is raised with an assessed confidence tier.</p>
         </div>
       </div>
       <div class="workflow-step fade-up">
@@ -333,7 +333,7 @@
         <div class="workflow-num">5</div>
         <div class="workflow-content">
           <h3 class="workflow-title">Evidence Preservation <span class="workflow-pill pill-impl">Implemented</span></h3>
-          <p class="workflow-desc">Post-impact video (CameraX), sensor snapshot, and GPS coordinates saved locally. The evidence bundle is cryptographically signed with SHA-256 via Android Hardware Keystore. Integrity is verifiable in-app at any time.</p>
+          <p class="workflow-desc">Contextual scene video and audio, vehicle motion telemetry, and exact road coordinates are secured into an offline evidence vault. A digital authenticity seal is generated at the moment of capture, guaranteeing that evidence remains tamper-evident and legally defensible.</p>
         </div>
       </div>
       <div class="workflow-step fade-up">
@@ -392,41 +392,52 @@
   </div>
 </section>
 
-<!-- TECHNOLOGY -->
+<!-- EVIDENCE ARCHITECTURE -->
 <section class="section section--850" id="technology">
   <div class="container">
-    <span class="section-label fade-up">Engineering</span>
-    <h2 class="section-title fade-up">Technology &amp; Architecture</h2>
+    <span class="section-label fade-up">Platform Architecture</span>
+    <h2 class="section-title fade-up">Evidence Integrity &amp; Architecture</h2>
     <div class="tech-grid">
       <div class="fade-up">
-        <p class="tech-desc">Vigilo uses a pragmatic, layered Clean-ish MVVM architecture — enough separation to keep safety-critical logic testable and isolated, without introducing more layers than a solo developer can maintain.</p>
-        <p class="tech-desc">The detection pipeline is a Flow transformation chain: sensor windowing, multi-axis feature extraction, and rule-based impact scoring running at 50Hz inside an Android foreground service. Core safety functions never require the network.</p>
-        <p class="tech-desc">Evidence integrity uses Android Hardware Keystore — private keys never leave the secure hardware enclave. SHA-256 signatures are computed at the moment of incident capture and stored alongside raw sensor data.</p>
+        <p class="tech-desc">Vigilo is engineered around a core safety imperative: in critical road incidents, emergency notification and evidence preservation must never fail due to network dropouts, cloud latency, or disputed accounts.</p>
+        <p class="tech-desc">Every incident recorded by Vigilo forms an integrated proof dossier &mdash; synchronizing vehicle motion dynamics, precise road locus coordinates, driver response timeline, and automated scene recordings.</p>
+        <p class="tech-desc">Evidence integrity is guaranteed through on-device cryptographic sealing. The moment an impact occurs, the complete incident bundle is digitally fingerprinted. Any subsequent attempt to alter or doctor records invalidates the seal, providing insurance adjusters, fleet operators, and legal counsel with an objective, tamper-evident record of truth.</p>
         <div class="arch-diagram">
-          <div class="arch-title">Application Layers</div>
-          <div class="arch-layer" style="background:rgba(37,99,235,0.12);color:#60A5FA;"><span>UI &mdash; Jetpack Compose Screens</span><span style="font-size:0.68rem;color:#475569;">state / events</span></div>
+          <div class="arch-title">Evidence Preservation &amp; Protection Lifecycle</div>
+          <div class="arch-layer" style="background:rgba(37,99,235,0.12);color:#60A5FA;"><span>1. Incident Detection &mdash; On-Device Collision Assessment</span><span style="font-size:0.68rem;color:#475569;">autonomous</span></div>
           <div class="arch-arrow">&#x2193;</div>
-          <div class="arch-layer" style="background:rgba(37,99,235,0.08);color:#93C5FD;"><span>ViewModels &mdash; StateFlow / UiState</span><span style="font-size:0.68rem;color:#475569;">viewModelScope</span></div>
+          <div class="arch-layer" style="background:rgba(37,99,235,0.08);color:#93C5FD;"><span>2. Multi-Source Capture &mdash; Telemetry, Location &amp; Scene Media</span><span style="font-size:0.68rem;color:#475569;">real-time</span></div>
           <div class="arch-arrow">&#x2193;</div>
-          <div class="arch-layer" style="background:rgba(2,132,199,0.12);color:#38BDF8;"><span>Domain &mdash; Impact Detection &middot; State Machine</span><span style="font-size:0.68rem;color:#475569;">pure Kotlin</span></div>
+          <div class="arch-layer" style="background:rgba(2,132,199,0.12);color:#38BDF8;"><span>3. Digital Tamper-Sealing &mdash; Unalterable Cryptographic Signature</span><span style="font-size:0.68rem;color:#475569;">hardware-backed</span></div>
           <div class="arch-arrow">&#x2193;</div>
-          <div class="arch-layer" style="background:rgba(5,150,105,0.10);color:#34D399;"><span>Repositories &mdash; Incident &middot; Sensor &middot; Evidence</span><span style="font-size:0.68rem;color:#475569;">interfaces</span></div>
+          <div class="arch-layer" style="background:rgba(5,150,105,0.10);color:#34D399;"><span>4. Offline Secure Vault &mdash; Local Persistence Independent of Cloud</span><span style="font-size:0.68rem;color:#475569;">zero-latency</span></div>
           <div class="arch-arrow">&#x2193;</div>
-          <div class="arch-layer" style="background:rgba(217,119,6,0.10);color:#FCD34D;"><span>Data Sources &mdash; Room &middot; CameraX &middot; SensorManager</span><span style="font-size:0.68rem;color:#475569;">Android APIs</span></div>
+          <div class="arch-layer" style="background:rgba(217,119,6,0.10);color:#FCD34D;"><span>5. Claims-Ready Export &mdash; Structured Dossier for Insurers &amp; Fleets</span><span style="font-size:0.68rem;color:#475569;">verifiable</span></div>
         </div>
       </div>
       <div class="fade-up">
-        <p class="tech-desc" style="margin-bottom:1rem;">Technology stack — verified from build configuration:</p>
+        <p class="tech-desc" style="margin-bottom:1rem;">Platform capabilities and architectural assurances:</p>
         <div class="tech-stack-pills">
-          <span class="tech-pill">Kotlin</span><span class="tech-pill">Jetpack Compose</span><span class="tech-pill">MVVM Architecture</span><span class="tech-pill">Room Database</span><span class="tech-pill">Android Foreground Service</span><span class="tech-pill">CameraX</span><span class="tech-pill">SensorManager &middot; 50Hz</span><span class="tech-pill">FusedLocationProvider</span><span class="tech-pill">Android Hardware Keystore</span><span class="tech-pill">SHA-256 Signing</span><span class="tech-pill">Gemini API</span><span class="tech-pill">GSM SMS</span><span class="tech-pill">Kotlin Coroutines &middot; Flow</span><span class="tech-pill">Navigation Compose</span><span class="tech-pill">SQLite &middot; Room DAOs</span>
+          <span class="tech-pill">Offline-First Engine</span>
+          <span class="tech-pill">Tamper-Proof Evidence Vault</span>
+          <span class="tech-pill">Cryptographic Integrity Sealing</span>
+          <span class="tech-pill">Multi-Axis Motion Telemetry</span>
+          <span class="tech-pill">Automated Scene Video &amp; Audio</span>
+          <span class="tech-pill">GPS Road Locus Breadcrumbs</span>
+          <span class="tech-pill">Direct GSM Emergency Dispatch</span>
+          <span class="tech-pill">Optical Bystander Beacon</span>
+          <span class="tech-pill">Claims-Ready Dossier Export</span>
+          <span class="tech-pill">Privacy-First On-Device Storage</span>
+          <span class="tech-pill">Adaptive Vehicle Mounting Profiles</span>
+          <span class="tech-pill">Deterministic Incident Timeline</span>
         </div>
         <div style="margin-top:2rem;padding:1.25rem;background:var(--slate-900);border-radius:12px;border:1px solid rgba(255,255,255,0.06);">
-          <div style="font-family:var(--font-mono);font-size:0.7rem;color:#475569;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">What Makes It Different</div>
+          <div style="font-family:var(--font-mono);font-size:0.7rem;color:#475569;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">Core Design Assurances</div>
           <div style="display:flex;flex-direction:column;gap:0.65rem;">
-            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Local-first &mdash; no cloud for the safety-critical path</div>
-            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Explainable detections &mdash; plain-language reason per alert</div>
-            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>AI strictly advisory &mdash; raw sensor facts are immutable</div>
-            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Two-wheeler and car aware via mounting profiles</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Evidence cannot be altered, forged, or repudiated after capture</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Zero cloud latency &mdash; emergency functions execute on-device</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Objective sensor facts remain immutable and legally defensible</div>
+            <div style="font-size:0.83rem;color:#94A3B8;display:flex;gap:8px;align-items:flex-start;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Calibrated for two-wheelers and passenger vehicles alike</div>
           </div>
         </div>
       </div>
@@ -444,7 +455,7 @@
       <div class="challenge-card fade-up">
         <div class="challenge-num">01</div>
         <h3 class="challenge-title">False Alarm Discrimination</h3>
-        <p class="challenge-desc">Distinguishing a real impact from a speed bump, pothole, phone drop, or aggressive braking at 50Hz sampling. Solved through multi-axis scoring across 9 dimensions, mounting-profile sensitivity calibration, and a false alarm feedback loop that updates on-device thresholds.</p>
+        <p class="challenge-desc">Distinguishing a genuine collision from normal driving anomalies, potholes, phone drops, or emergency braking. Solved through adaptive multi-sensor scoring, vehicle mounting profiles, and an on-device false alarm verification workflow.</p>
       </div>
       <div class="challenge-card fade-up">
         <div class="challenge-num">02</div>
@@ -454,7 +465,7 @@
       <div class="challenge-card fade-up">
         <div class="challenge-num">03</div>
         <h3 class="challenge-title">Evidence Integrity from Consumer Hardware</h3>
-        <p class="challenge-desc">Producing legally defensible incident records from an ordinary smartphone. SHA-256 Hardware Keystore signing ensures private keys never leave the secure enclave. Raw data, calculated values, and AI interpretation remain in strictly separate, immutable layers.</p>
+        <p class="challenge-desc">Producing legally defensible incident records from an everyday mobile device. On-device cryptographic sealing ensures incident evidence is tamper-evident and verified, while objective telemetry and advisory summaries remain in distinct, verifiable layers.</p>
       </div>
     </div>
   </div>
@@ -470,7 +481,7 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
       </div>
       <h3 class="demo-title">Physical Android Device Prototype</h3>
-      <p class="demo-sub">Vigilo is evaluated directly on physical Android testbeds to validate real-world 50Hz sensor fusion, vibration dampening, and offline GSM dispatch. For technical reviewers, automotive researchers, and enterprise partners, guided interactive walkthroughs and live hardware sessions are available upon request.</p>
+      <p class="demo-sub">Vigilo is evaluated directly on physical Android testbeds to validate real-world impact detection, vibration dampening, and offline GSM dispatch. For technical reviewers, automotive researchers, and enterprise partners, guided interactive walkthroughs and live hardware sessions are available upon request.</p>
       <div class="demo-actions">
         <a href="#contact" class="btn btn-primary">Request Guided Walkthrough</a>
         <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Explore Technical Specs</a>
@@ -491,15 +502,15 @@
       <table class="status-table">
         <thead><tr><th>Capability</th><th>Status</th></tr></thead>
         <tbody>
-          <tr><td>Sensor Fusion Detection (50Hz)</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>Countdown Alert (audio + haptic)</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Automated Incident Detection</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Countdown Alert &amp; Cancellation</td><td class="status-impl">Implemented</td></tr>
           <tr><td>Voice Command Recognition</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>Real GSM SMS Dispatch</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>SHA-256 Evidence (Hardware Keystore)</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>CameraX Post-Impact Video</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>Bystander Strobe Beacon</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>AI Incident Report (Gemini, advisory)</td><td class="status-impl">Implemented</td></tr>
-          <tr><td>Offline-First SQLite Storage</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Direct GSM Emergency Dispatch</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Tamper-Proof Evidence Vault</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Post-Impact Scene Video &amp; Audio</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Bystander Emergency Beacon</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Claims-Ready Incident Dossier &amp; AI Summary</td><td class="status-impl">Implemented</td></tr>
+          <tr><td>Offline-First Secure Local Vault</td><td class="status-impl">Implemented</td></tr>
           <tr><td>Emergency Call UI</td><td class="status-sim">Simulated &middot; Ethical Design</td></tr>
           <tr><td>Pre-Impact Rolling Buffer</td><td class="status-no">Post-MVP Planned</td></tr>
           <tr><td>Cloud Sync / Multi-Device</td><td class="status-no">Not in MVP Scope</td></tr>
@@ -554,7 +565,7 @@
       <div class="dev-avatar">BV</div>
       <div class="dev-name">Bhvya Vaish</div>
       <div class="dev-role">Android Developer &middot; Product Designer &middot; Systems Thinker</div>
-      <p class="dev-bio">Vigilo is a solo-developed Android prototype created with Kotlin, Jetpack Compose, and the Google AI ecosystem. Built to demonstrate deterministic crash detection, cryptographic evidence integrity, and responsible AI-assisted reporting.</p>
+      <p class="dev-bio">Vigilo is an engineered mobile road-safety platform prototype. Built to demonstrate autonomous incident alerting, tamper-proof digital evidence capture, and claims-ready incident reporting.</p>
       <div class="dev-links">
         <a href="https://github.com/BhvyaVaish/vigilo-showcase" target="_blank" rel="noopener noreferrer" class="dev-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
         <a href="https://bhvyavaish.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>Portfolio</a>
@@ -654,7 +665,7 @@
         <a href="index.html#overview" class="footer-link">Overview</a>
         <a href="index.html#features" class="footer-link">Core Features</a>
         <a href="index.html#how-it-works" class="footer-link">Detection Loop</a>
-        <a href="index.html#technology" class="footer-link">Tech Stack</a>
+        <a href="index.html#technology" class="footer-link">Evidence Architecture</a>
         <a href="index.html#demo" class="footer-link">Device Screenshots</a>
       </div>
     </div>
