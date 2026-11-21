@@ -1,0 +1,32 @@
+# ==============================================================================
+# Vigilo — Robots Configuration
+# https://vigilo-showcase.vercel.app
+# Developed by Bhvya Vaish
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /index.html
+Allow: /business.html
+Allow: /enterprise
+Disallow: /*.bat$
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+
+# Bingbot specific directives
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+
+# Applebot specific directives
+User-agent: Applebot
+Allow: /
+Allow: /assets/
+
+# Host & Sitemap specification
+Host: https://vigilo-showcase.vercel.app
+Sitemap: https://vigilo-showcase.vercel.app/sitemap.xml
