@@ -4,11 +4,12 @@ authors:
   - family-names: "Vaish"
     given-names: "Bhvya"
     website: "https://bhvyavaish.vercel.app/"
-title: "Vigilo: Intelligent Road-Incident Detection and Emergency Response Platform"
+title: "Vigilo: Intelligent Road-Incident Detection and Evidence Preservation Platform"
 version: 1.0.0
 date-released: 2026-10-29
-url: "https://github.com/bhvyavaish/vigilo-showcase"
-abstract: "Technical architecture, telemetry specifications, and systems design for Vigilo, an autonomous Android prototype that combines high-frequency IMU sensor fusion, on-device machine learning, zero-touch emergency escalation, and hardware-backed SHA-256 evidence integrity."
+url: "https://vigilo-showcase.vercel.app/"
+repository-code: "https://github.com/bhvyavaish/vigilo-showcase"
+abstract: "Technical architecture, telemetry specifications, and systems design for Vigilo, an autonomous Android platform that combines high-frequency IMU sensor fusion, on-device machine learning, zero-touch emergency escalation, and hardware-backed cryptographic evidence preservation."
 keywords:
   - "road safety"
   - "accident detection"
@@ -17,4 +18,6 @@ keywords:
   - "jetpack compose"
   - "telematics"
   - "cryptographic evidence"
+  - "evidence vault"
   - "emergency response"
+  - "Bhvya Vaish"

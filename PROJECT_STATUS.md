@@ -1,8 +1,11 @@
 # Project Status & Capability Verification
 
 **Repository:** `vigilo-showcase`  
+**Official Live Showcase:** [https://vigilo-showcase.vercel.app/](https://vigilo-showcase.vercel.app/)  
+**Enterprise & Fleet Portal:** [https://vigilo-showcase.vercel.app/enterprise](https://vigilo-showcase.vercel.app/enterprise)  
+**Developer:** [Bhvya Vaish](https://www.linkedin.com/in/bhvya-vaish)  
 **Application Prototype Version:** `1.0` (Build Code: 1)  
-**Status Verification Date:** October 2026  
+**Status Verification Date:** November 2026  
 **Evaluation Scope:** Codebase inspection, unit test suites, and architecture validation of the private Vigilo project workspace.
 
 ---
